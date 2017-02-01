@@ -16,8 +16,10 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.FrameLayout;
 import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 public class CustomPhotoGalleryActivity extends AppCompatActivity {
@@ -157,6 +159,7 @@ public class CustomPhotoGalleryActivity extends AppCompatActivity {
                 convertView = mInflater.inflate(R.layout.galary_item, null);
                 holder.imgThumb = (ImageView) convertView.findViewById(R.id.imgThumb);
                 holder.chkImage = (CheckBox) convertView.findViewById(R.id.chkImage);
+                holder.imgThumb.setLayoutParams(new FrameLayout.LayoutParams(350, 350));
 
                 convertView.setTag(holder);
             } else {
